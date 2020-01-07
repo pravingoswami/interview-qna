@@ -27,6 +27,7 @@ class App extends React.Component{
           <Link to = "/" ></Link>
           <Link to = "/questions/:id" ></Link>
           <Link to = "/questions/answer/:id" ></Link>
+          {/* <Link to = "/questions/answer/:id" ></Link> */}
 
           
 
