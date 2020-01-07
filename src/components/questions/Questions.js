@@ -12,11 +12,48 @@ class Questions extends React.Component{
         super()
         this.state = {
             catagories : [
-                {id : 1, title : "JavaScript Questions", description : ["VARIABLES", "DATA TYPES - STRING , NUMBER"], url : "https://analyticsindiamag.com/wp-content/uploads/2019/11/javascript.png"},
+                {id : 1, title : "JavaScript Questions", tags : [
+                    {
+                        id : 1,
+                        name : "variabale"
+                    },
+                    {
+                        id : 2,
+                        name : "numbers"
+                    },
+                    {
+                        id : 3,
+                        name : "strings"
+                    },
+                    {
+                        id : 4,
+                        name : "boolean"
+                    },
+                    {
+                        id : 5,
+                        name : "arrays"
+                    },
+                    {
+                        id : 6,
+                        name : "hashes"
+                    },
+                    {
+                        id : 7,
+                        name : "conditions"
+                    },
+                    {
+                        id : 8,
+                        name : "loop"
+                    },
+                    {
+                        id : 9,
+                        name : "functions"
+                    }
+            ], url : "https://analyticsindiamag.com/wp-content/uploads/2019/11/javascript.png"},
 
-                {id : 2, title : "React for Absolute Beginners", description : ["INTRODUCTION TO REACT", "JSX (JAVASCRIPT XML)"], url : "https://miro.medium.com/max/3840/1*vHHBwcUFUaHWXntSnqKdCA.png"},
+                {id : 2, title : "React for Absolute Beginners", tags : ["INTRODUCTION TO REACT", "JSX (JAVASCRIPT XML)"], url : "https://miro.medium.com/max/3840/1*vHHBwcUFUaHWXntSnqKdCA.png"},
 
-                {id : 3, title : "React Interview Questions", description : ["CORE REACT", "REACT ROUTER"], url : "https://i.udemycdn.com/course/750x422/1362816_c4a6_3.jpg"}
+                {id : 3, title : "React Interview Questions", tags : ["CORE REACT", "REACT ROUTER"], url : "https://i.udemycdn.com/course/750x422/1362816_c4a6_3.jpg"}
             ],
             data : {}
         }
@@ -45,7 +82,7 @@ class Questions extends React.Component{
  
 
                 {
-                   Object.keys(this.state.data).length > 0 &&  this.state.data.description.map((data, i) => {
+                   Object.keys(this.state.data).length > 0 &&  this.state.data.tags.map((data, i) => {
                        console.log(data)
                     return(
                         <Section key = {i} data = {data}/>

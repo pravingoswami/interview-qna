@@ -1,0 +1,19 @@
+"variables", "javascript"
+
+"numbers", "javascript"
+
+"strings", "javascript"
+
+"boolean", "javascript"
+
+"arrays", "javascript"
+
+"arrays", "javascript", "loop"
+
+"hashes", " js objects", "javascript"
+
+"conditions", "javascript"
+
+"loop", "javascript"
+
+"functions", "methods", "javascript"

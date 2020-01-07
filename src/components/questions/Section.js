@@ -1,17 +1,20 @@
 import React from "react";
 import { MDBContainer, MDBAlert, MDBIcon, MDBBtn, MDBMedia  } from 'mdbreact';
+import {Link} from 'react-router-dom'
 
 
 
-const handleQuestion = () => {
-    console.log('hiiii')
-}
-
-
-function Section (props){
 
 
 
+class Section extends React.Component{
+
+    handleQuestion = (id) => {
+      console.log(id)
+      // this.props.history.push(`/answer/${id}`)
+    }
+
+  render(){
   return (
     <div>
               {/* <MDBAlert color="mdb-color" className="shadow-box-example z-depth-1" >
@@ -19,21 +22,25 @@ function Section (props){
       </MDBAlert>
  */}
 
-      <MDBBtn color="dark" className="shadow-box-example z-depth-2" style = {{textAlign : "left", width : "97%"}} onClick = {handleQuestion()} >
+<Link style = {{textDecoration : "none", color : "white"}} to = {`/questions/answer/${this.props.data.id}`}  >
+      <MDBBtn color="dark" className="shadow-box-example z-depth-2" style = {{textAlign : "left", width : "97%"}} onClick = {() => this.handleQuestion(this.props.data.id)}  >
         
 
 
 
 
-            <MDBMedia>{console.log(props.data)}
+
+<MDBMedia>
      
-                {props.data &&  <MDBMedia body>{props.data}</MDBMedia> }
-                <MDBMedia right middle style = {{marginLeft : "10px"}} >
-                            <MDBIcon icon="angle-right" style = {{float : "right"}} size = "2x" />
-                    </MDBMedia>
-                </MDBMedia>
+     {this.props.data &&  <MDBMedia body> Section {this.props.data.id} &nbsp;: &nbsp; {this.props.data.name}</MDBMedia> }
+     <MDBMedia right middle style = {{marginLeft : "10px"}} >
+                 <MDBIcon icon="angle-right" style = {{float : "right"}} size = "2x" />
+         </MDBMedia>
+     </MDBMedia>
+
 
       </MDBBtn>
+      </Link>
 
 {/*       
             <div body >
@@ -49,6 +56,6 @@ function Section (props){
 
     </div>
   );
-};
+}};
 
 export default Section;

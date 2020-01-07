@@ -26,13 +26,13 @@ class App extends React.Component{
 
           <Link to = "/" ></Link>
           <Link to = "/questions/:id" ></Link>
-          <Link to = "/answer/:id" ></Link>
+          <Link to = "/questions/answer/:id" ></Link>
 
           
 
           <Route path = "/" component = {Home} exact = {true} />
           <Route path = "/questions/:id" component = {Questions} exact = {true} />
-          <Route path = "/answer/:id" component = {Answer} exact = {true} />
+          <Route path = "/questions/answer/:ansID" component = {Answer} exact = {true} />
           {/* <Home /> */}
 
 
