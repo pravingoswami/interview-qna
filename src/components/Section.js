@@ -43,7 +43,6 @@ class Section extends React.Component{
     render(){
         return(
             <div>
-                <h1>hiii</h1>
                 <Navbar back = {true} handleUrl = {this.handleUrl} />
                 <br></br>
                 <MDBContainer><strong><h3>{this.state.title}</h3></strong></MDBContainer>
