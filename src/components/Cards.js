@@ -1,4 +1,5 @@
 import React from 'react'
+import axios from 'axios'
 
 import CardDesign from './CardDesign'
 
@@ -7,15 +8,21 @@ class Cards extends React.Component{
     constructor(){
         super()
         this.state = {
-            catagories : [
-                {id : 1, title : "JavaScript Questions", description : ["VARIABLES", "DATA TYPES - STRING , NUMBER"], url : "https://analyticsindiamag.com/wp-content/uploads/2019/11/javascript.png"},
-
-                {id : 2, title : "React for Absolute Beginners", description : ["INTRODUCTION TO REACT", "JSX (JAVASCRIPT XML)"], url : "https://miro.medium.com/max/3840/1*vHHBwcUFUaHWXntSnqKdCA.png"},
-
-                {id : 3, title : "React Interview Questions", description : ["CORE REACT", "REACT ROUTER"], url : "https://i.udemycdn.com/course/750x422/1362816_c4a6_3.jpg"}
-            ]
-        }
+            sections : []
     }
+}
+
+    componentDidMount = () => {
+        axios.get('https://teleological-week.000webhostapp.com/sections.json')
+            .then(response => {
+                const sections = response.data
+                console.log(sections)
+                this.setState({sections})
+            })
+
+            .catch(err => alert(err))
+    }
+
 
     render(){
         return(
@@ -23,7 +30,7 @@ class Cards extends React.Component{
                 <br></br>
               <br></br>
                 {
-                    this.state.catagories.map(data => {
+                    this.state.sections.map(data => {
                         return(
                             <CardDesign key = {data.id} data = {data} />
                         )

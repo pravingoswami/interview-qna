@@ -26,13 +26,13 @@ class Answer extends React.Component{
 
 
     componentDidMount = () => {
-        axios.get('https://teleological-week.000webhostapp.com/questions.json')
+        axios.get('https://teleological-week.000webhostapp.com/answer.json')
 
             .then(response => {
                 let questions = response.data
                 // console.log(questions)
                 // questions = questions.filter(data => data.answer.includes("variable"))
-                questions = this.state.answer.tags.includes("javascript")
+                // questions = this.state.answer.tags.includes("javascript")
 
                 console.log(questions)
                 this.setState({questions})

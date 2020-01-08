@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Navbar from '../Navbar'
-import Section from './Section'
+import TagSection from './TagSection'
 
 import { MDBBreadcrumb, MDBBreadcrumbItem,MDBCollapseHeader,  MDBContainer } from "mdbreact";
 
@@ -85,7 +85,7 @@ class Questions extends React.Component{
                    Object.keys(this.state.data).length > 0 &&  this.state.data.tags.map((data, i) => {
                        console.log(data)
                     return(
-                        <Section key = {i} data = {data}/>
+                        <TagSection key = {i} data = {data}/>
                     )
                 })
                 }

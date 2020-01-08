@@ -29,7 +29,7 @@ function CardDesign(props){
               <MDBCardText>
                     {props.data.description}
               </MDBCardText>
-                    <Link to = {`/questions/${props.data.id}`} ><MDBBtn color="primary" style = {{width : "100%"}} >Explore</MDBBtn></Link>
+                    <Link to = {`/section/${props.data.name}`} ><MDBBtn color="primary" style = {{width : "100%"}} >Explore</MDBBtn></Link>
             </MDBCardBody>
           </MDBCard>
         </MDBCol>
