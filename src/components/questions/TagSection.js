@@ -16,10 +16,11 @@ class TagSection extends React.Component{
     <div>
 
 
-            <Link style = {{textDecoration : "none", color : "white"}} to = {`/section/${this.props.id}/${this.props.data.name}`}    >
-                <MDBBtn color="dark" className="shadow-box-example z-depth-2" style = {{textAlign : "left", width : "97%"}} onClick = {() => this.handleQuestion(this.props.data.id)}  >
-                    
+            <Link style = {{textDecoration : "none", color : "white"}} to = {`/section/${this.props.id}/${this.props.tag}/${this.props.data.slug}`} >
+                <MDBBtn color="dark" className="shadow-box-example z-depth-2" style = {{textAlign : "left", width : "97%"}}  >
 
+                {/* <MDBBtn color="dark" className="shadow-box-example z-depth-2" style = {{textAlign : "left", width : "97%"}} onClick = {() => this.handleQuestion(this.props.data.id)}  > */}
+                    
 
 
 

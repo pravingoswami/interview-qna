@@ -48,7 +48,7 @@ class Section extends React.Component{
                 <MDBContainer><strong><h3>{this.state.title}</h3></strong></MDBContainer>
                 {
                         this.state.data.length > 1 && this.state.data.map((tag) => {
-                            console.log(tag)
+                            // console.log(tag)
                             return(
                                 <SectionShow  data = {tag} id = {this.props.match.params.id} />
                             )

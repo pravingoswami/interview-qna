@@ -46,7 +46,7 @@ class Questions extends React.Component{
                 // console.log(questions)
                 questions = questions.filter(ele => ele.tags.includes(`${id}` && `${tag}`))
                 // console.log(questions.forEach(ele => ele.tags))
-                // console.log(questions)
+                console.log(questions)
                 this.setState({questions})
 
             })
@@ -61,7 +61,7 @@ class Questions extends React.Component{
 
                 <br></br>
                 <br></br>
-                <br></br>
+                <br></br>{console.log(this.props.match.params.id, this.props.match.params.tag, this.props.match.params.qua)}
 
                 {/* <div>
                     <h1>{this.props.match.params.tag}</h1>
@@ -73,9 +73,9 @@ class Questions extends React.Component{
                 
                 
                     this.state.questions.length > 1 && this.state.questions.map((qua,i) => {
-                        console.log(qua)
+                        // console.log(qua)
                         return(
-                            <TagSection data = {qua} number = {i}/>
+                            <TagSection data = {qua} number = {i}  id = {this.props.match.params.id} tag = {this.props.match.params.tag}/>
                         )
                     })
                 /* 
